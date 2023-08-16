@@ -1,0 +1,13 @@
+version: '3'
+services:
+  client:
+    image: three-client:latest
+    ports:
+      - 5173:5173
+    command: npm run dev
+
+  server:
+    image: three-server:latest
+    ports:
+      - 8080:8080
+    command: npm start
